@@ -4,8 +4,6 @@ services:
     kamailio:
       build: ./kamailio
       command: -de
-      ports:
-        - 5060:5060/udp
       volumes:
         - ./kamailio:/etc/kamailio
 

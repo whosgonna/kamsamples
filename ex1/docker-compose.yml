@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+
+    kamailio:
+      build: ./kamailio
+      command: -de
+      ports:
+        - 5060:5060/udp
+      volumes:
+        - ./kamailio:/etc/kamailio
+
+    sipp:
+      build: ./kamailio
+      entrypoint: sipp -m 1 -sf uac_expect_403.xml kamailio
+      working_dir: /sipp
+      #tty: true
+      volumes:
+        - ./sipp:/sipp
+

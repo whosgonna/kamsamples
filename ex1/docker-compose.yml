@@ -11,9 +11,9 @@ services:
 
     sipp:
       build: ./kamailio
-      entrypoint: sipp -m 1 -sf uac_expect_403.xml kamailio
+      entrypoint: sh
       working_dir: /sipp
-      #tty: true
+      tty: true
       volumes:
         - ./sipp:/sipp
 

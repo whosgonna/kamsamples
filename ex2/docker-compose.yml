@@ -11,13 +11,16 @@ services:
       build: ./proxy
       entrypoint: sh
       working_dir: /sipp
+      stop_signal: SIGKILL
       tty: true
       volumes:
         - ./uac:/sipp
 
     uas:
-        build: ./proxy
-        entrypoint: sh
-        tty: true
-        volumes:
-            - ./uas:/etc/kamailio
+      build: ./proxy
+      entrypoint: sh
+      working_dir: /sipp
+      stop_signal: SIGKILL
+      tty: true
+      volumes:
+        - ./uas:/etc/kamailio

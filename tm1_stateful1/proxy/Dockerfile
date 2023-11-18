@@ -1,6 +1,6 @@
 FROM alpine:3.17
 
-ADD https://github.com/miconda/sipexer/releases/download/v1.1.0/sipexer-v1.1.0-linux-amd64.tar.gz /usr/bin/sipexer
+ADD https://github.com/whosgonna/sipexer/releases/download/untagged-0c39aa5e47f0ab1c3255/sipexer /usr/bin/sipexer
 
 RUN wget -O whosgonna-repo-00B57683F0568A5B55999F542C5F836ED8A8A135.rsa.pub \
         https://packagecloud.io/whosgonna/repo/rsakey/whosgonna-repo-00B57683F0568A5B55999F542C5F836ED8A8A135.rsa.pub \
